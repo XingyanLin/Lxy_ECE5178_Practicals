@@ -1,0 +1,9 @@
+RRT 
+
+# 3. Select a node (nearby_node) close to expansion_node by moving from expantion_node to rnd_node
+            nearby_node = self.steer(expansion_node, rnd_node, self.expand_dis)
+
+            # 4. Check if nearby_node is in free space (i.e., it is collision free). If collision free, add node
+            # to self.node_list
+            if self.is_collision_free(nearby_node):
+                self.node_list.append(nearby_node)
